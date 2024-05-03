@@ -1,3 +1,4 @@
 import streamlit as st
 
-st.write("hi")
+st.title("hi")
+
