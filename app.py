@@ -18,4 +18,4 @@ target_flowability = st.text_input('target flowability:')
 
 st.button('predict my required roll pressure')
 
-st.markdown('predicted required roll pressure is: **47**'
+st.markdown('predicted required roll pressure is: **47**')
