@@ -15,3 +15,5 @@ if drug == 'input my own drug characteristics':
 
 target_solid_fraction = st.text_input('target solid fraction (default 0.7):', value = 0.7)
 target_flowability = st.text_input('target flowability:')
+
+st.button('predict my required roll pressure')
