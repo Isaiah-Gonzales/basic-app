@@ -5,7 +5,7 @@ import tensorflow as tf
 st.title("Artificial Neural Network: Roller Compactor Tool")
 st.text("beta version: fixed drug load % and roll gap")
 
-predictor = st.selectbox('what would you like to predict:', ('Flowability','Roll Pressure'), help='**Flowability** assumes you have a target roll pressure and solid fraction, while **Roll Pressure** assumes you have a target flowability and solid fraction)
+predictor = st.selectbox('what would you like to predict:', ('Flowability','Roll Pressure'), help='**Flowability** assumes you have a target roll pressure and solid fraction, while **Roll Pressure** assumes you have a target flowability and solid fraction')
 
 drug = st.selectbox('Please select your drug:', ('ibupfrofen', 'metformin', 'input my own drug characteristics'))
 
