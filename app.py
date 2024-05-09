@@ -1,6 +1,6 @@
 import streamlit as st
 import tensorflow as tf
-
+import random
 
 st.title("Artificial Neural Network: Roller Compactor Tool")
 st.text("beta version: fixed drug load % and roll gap")
@@ -15,8 +15,13 @@ if drug == 'input my own drug characteristics':
         ib_flow_rate = st.text_input('initial blend flow rate')
         ib_true_d = st.text_input('intial blend flow rate')
 
-target_solid_fraction = st.text_input('target solid fraction:', value = 0.7, help='default is conventional target solid fraction')
-target_flowability = st.text_input('target flowability (seconds/100g):',value = 33.7, help='default is the flowability of a placebo blend')
+if predictor == 'Roll Pressure':
+        target_solid_fraction = st.text_input('target solid fraction:', value = 0.7, help='default is conventional target solid fraction')
+        target_flowability = st.text_input('target flowability (seconds/100g):',value = 33.7, help='default is the flowability of a placebo blend')
+        if st.button('predict my required roll pressure'):
+                        pressures = [47,70,93,116]
+                        num = random.choice(pressures)
+                        st.markdown('predicted required roll pressure is: **{{num}}**')
 
-if st.button('predict my required roll pressure'):
-        st.markdown('predicted required roll pressure is: **47**')
+
+        
