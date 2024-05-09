@@ -15,8 +15,8 @@ if drug == 'input my own drug characteristics':
         ib_flow_rate = st.text_input('initial blend flow rate')
         ib_true_d = st.text_input('intial blend flow rate')
 
-target_solid_fraction = st.text_input('target solid fraction (default 0.7):', value = 0.7)
-target_flowability = st.text_input('target flowability (seconds/100g): (default 33.7)', help='default is the flowability of a placebo blend')
+target_solid_fraction = st.text_input('target solid fraction:', value = 0.7, help='default is conventional target solid fraction')
+target_flowability = st.text_input('target flowability (seconds/100g):',value = 33.7 help='default is the flowability of a placebo blend')
 
 if st.button('predict my required roll pressure'):
         st.markdown('predicted required roll pressure is: **47**')
