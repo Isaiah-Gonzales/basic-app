@@ -20,8 +20,9 @@ if predictor == 'Roll Pressure':
         target_flowability = st.text_input('target flowability (seconds/100g):',value = 33.7, help='default is the flowability of a placebo blend')
         if st.button('predict my required roll pressure'):
                         pressures = [47,70,93,116]
-                        num = random.choice(pressures)
-                        st.markdown('predicted required roll pressure is: **{{num}}**')
+                        num = str(random.choice(pressures))
+                        st.markdown('predicted required roll pressure is:')
+                        st.write(num)
 
 
         
