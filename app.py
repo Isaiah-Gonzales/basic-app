@@ -17,13 +17,13 @@ if predictor == 'Roll Pressure':
                 ib_flow_rate = st.text_input('initial blend flow rate')
                 ib_true_d = st.text_input('intial blend flow rate')
         
-                target_solid_fraction = st.text_input('target solid fraction:', value = 0.7, help='default is conventional target solid fraction')
-                target_flowability = st.text_input('target flowability (seconds/100g):',value = 33.7, help='default is the flowability of a placebo blend')
-                if st.button('predict my required roll pressure'):
-                                pressures = [47,70,93,116]
-                                num = str(random.choice(pressures))
-                                st.markdown('predicted required roll pressure is:')
-                                st.write(num)
+        target_solid_fraction = st.text_input('target solid fraction:', value = 0.7, help='default is conventional target solid fraction')
+        target_flowability = st.text_input('target flowability (seconds/100g):',value = 33.7, help='default is the flowability of a placebo blend')
+        if st.button('predict my required roll pressure'):
+                        pressures = [47,70,93,116]
+                        num = str(random.choice(pressures))
+                        st.markdown('predicted required roll pressure is:')
+                        st.write(num)
 
 if predictor == 'Flowability':
         drug = st.selectbox('Please select your drug:', ('ibupfrofen', 'metformin', 'input my own drug characteristics'))
